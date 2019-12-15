@@ -8,4 +8,6 @@ public class ItemList {
 
     // BlockItems
     public static Item super_coal_ore;
+    public static Item super_coal_ore_nether;
+    public static Item super_coal_ore_end;
 }

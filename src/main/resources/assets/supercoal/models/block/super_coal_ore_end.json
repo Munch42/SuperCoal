@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "supercoal:block/super_coal_ore_end"
+  }
+}

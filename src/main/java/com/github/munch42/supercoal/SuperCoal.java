@@ -25,6 +25,8 @@ public class SuperCoal {
     public static SuperCoal instance;
     private static final Logger logger = LogManager.getLogger(modid);
 
+    public static final ItemGroup supercoal = new SuperCoalItemGroup();
+
     public SuperCoal(){
         instance = this;
 
@@ -48,10 +50,12 @@ public class SuperCoal {
         public static void registerItems(final RegistryEvent.Register<Item> event){
             event.getRegistry().registerAll(
                 // Normal Items
-                ItemList.super_coal = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("super_coal")),
+                ItemList.super_coal = new Item(new Item.Properties().group(supercoal)).setRegistryName(location("super_coal")),
 
                 // BlockItems
-                ItemList.super_coal_ore = new BlockItem(BlockList.super_coal_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(BlockList.super_coal_ore.getRegistryName())
+                ItemList.super_coal_ore = new BlockItem(BlockList.super_coal_ore, new Item.Properties().group(supercoal)).setRegistryName(BlockList.super_coal_ore.getRegistryName()),
+                ItemList.super_coal_ore_nether = new BlockItem(BlockList.super_coal_ore_nether, new Item.Properties().group(supercoal)).setRegistryName(BlockList.super_coal_ore_nether.getRegistryName()),
+                ItemList.super_coal_ore_end = new BlockItem(BlockList.super_coal_ore_end, new Item.Properties().group(supercoal)).setRegistryName(BlockList.super_coal_ore_end.getRegistryName())
             );
 
             logger.info("Items Registered");
@@ -60,7 +64,9 @@ public class SuperCoal {
         @SubscribeEvent
         public static void registerBlocks(final RegistryEvent.Register<Block> event){
             event.getRegistry().registerAll(
-                    BlockList.super_coal_ore = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.STONE)).setRegistryName(location("super_coal_ore"))
+                    BlockList.super_coal_ore = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.STONE)).setRegistryName(location("super_coal_ore")),
+                    BlockList.super_coal_ore_nether = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.STONE)).setRegistryName(location("super_coal_ore_nether")),
+                    BlockList.super_coal_ore_end = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.STONE)).setRegistryName(location("super_coal_ore_end"))
             );
 
             logger.info("Blocks Registered");

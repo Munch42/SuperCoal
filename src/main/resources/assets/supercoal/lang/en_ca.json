@@ -1,5 +1,9 @@
 {
   "item.supercoal.super_coal": "Super Coal",
 
-  "block.supercoal.super_coal_ore": "Super Coal Ore"
+  "block.supercoal.super_coal_ore": "Super Coal Ore",
+  "block.supercoal.super_coal_ore_nether": "Nether Super Coal Ore",
+  "block.supercoal.super_coal_ore_end": "End Super Coal Ore",
+
+  "itemGroup.supercoal": "Super Coal"
 }

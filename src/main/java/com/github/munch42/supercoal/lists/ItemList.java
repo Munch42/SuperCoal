@@ -6,6 +6,9 @@ public class ItemList {
     // Normal Items
     public static Item super_coal;
 
+    // Eggs
+    public static Item super_coal_cow_egg;
+
     // BlockItems
     public static Item super_coal_ore;
     public static Item super_coal_ore_nether;

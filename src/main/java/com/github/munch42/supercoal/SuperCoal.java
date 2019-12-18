@@ -1,10 +1,13 @@
 package com.github.munch42.supercoal;
 
+import com.github.munch42.supercoal.client.render.SuperCoalRenderRegistry;
+import com.github.munch42.supercoal.lists.SuperCoalEntities;
 import com.github.munch42.supercoal.lists.BlockList;
 import com.github.munch42.supercoal.lists.ItemList;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -41,7 +44,7 @@ public class SuperCoal {
     }
 
     private void clientRegistries(final FMLClientSetupEvent event){
-
+        SuperCoalRenderRegistry.registerEntityRenders();
     }
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -58,6 +61,8 @@ public class SuperCoal {
                 ItemList.super_coal_ore_end = new BlockItem(BlockList.super_coal_ore_end, new Item.Properties().group(supercoal)).setRegistryName(BlockList.super_coal_ore_end.getRegistryName())
             );
 
+            SuperCoalEntities.registerEntitySpawnEggs(event);
+
             logger.info("Items Registered");
         }
 
@@ -72,8 +77,17 @@ public class SuperCoal {
             logger.info("Blocks Registered");
         }
 
-        private static ResourceLocation location(String name){
-            return new ResourceLocation(modid, name);
+        @SubscribeEvent
+        public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event){
+            event.getRegistry().registerAll(
+                    SuperCoalEntities.SUPER_COAL_COW
+            );
+
+            SuperCoalEntities.registerEntityWorldSpawns();
         }
+    }
+
+    public static ResourceLocation location(String name){
+        return new ResourceLocation(modid, name);
     }
 }

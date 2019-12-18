@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values":[
+    "supercoal:super_coal_ore",
+    "supercoal:super_coal_ore_nether",
+    "supercoal:super_coal_ore_end"
+  ]
+}

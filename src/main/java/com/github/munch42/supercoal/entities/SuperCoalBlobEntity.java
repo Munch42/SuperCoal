@@ -9,9 +9,9 @@ import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.world.World;
 
-public class SuperCoalCowEntity extends CreatureEntity {
-    public SuperCoalCowEntity(EntityType<? extends CreatureEntity> type, World worldIn){
-        super((EntityType<? extends CreatureEntity>) SuperCoalEntities.SUPER_COAL_COW, worldIn);
+public class SuperCoalBlobEntity extends CreatureEntity {
+    public SuperCoalBlobEntity(EntityType<? extends CreatureEntity> type, World worldIn){
+        super((EntityType<? extends CreatureEntity>) SuperCoalEntities.SUPER_COAL_BLOB, worldIn);
     }
 
     @Override

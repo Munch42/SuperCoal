@@ -1,6 +1,7 @@
 package com.github.munch42.supercoal;
 
 import com.github.munch42.supercoal.client.render.SuperCoalRenderRegistry;
+import com.github.munch42.supercoal.generation.OreGeneration;
 import com.github.munch42.supercoal.lists.SuperCoalEntities;
 import com.github.munch42.supercoal.lists.BlockList;
 import com.github.munch42.supercoal.lists.ItemList;
@@ -40,7 +41,7 @@ public class SuperCoal {
     }
 
     private void setup(final FMLCommonSetupEvent event){
-
+        OreGeneration.setupOreGen();
     }
 
     private void clientRegistries(final FMLClientSetupEvent event){

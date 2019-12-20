@@ -1,6 +1,7 @@
 package com.github.munch42.supercoal.lists;
 
 import com.github.munch42.supercoal.SuperCoal;
+import com.github.munch42.supercoal.entities.SuperCoalBlobEntity;
 import com.github.munch42.supercoal.entities.SuperCoalCowEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -12,7 +13,7 @@ import net.minecraftforge.event.RegistryEvent;
 
 public class SuperCoalEntities {
     public static EntityType<?> SUPER_COAL_COW = EntityType.Builder.create(SuperCoalCowEntity::new, EntityClassification.CREATURE).build(SuperCoal.modid + ":super_coal_cow").setRegistryName(SuperCoal.location("super_coal_cow"));
-    public static EntityType<?> SUPER_COAL_BLOB = EntityType.Builder.create(SuperCoalCowEntity::new, EntityClassification.CREATURE).build(SuperCoal.modid + ":super_coal_blob").setRegistryName(SuperCoal.location("super_coal_blob"));
+    public static EntityType<?> SUPER_COAL_BLOB = EntityType.Builder.create(SuperCoalBlobEntity::new, EntityClassification.CREATURE).build(SuperCoal.modid + ":super_coal_blob").setRegistryName(SuperCoal.location("super_coal_blob"));
 
     public static void registerEntitySpawnEggs(final RegistryEvent.Register<Item> event){
         event.getRegistry().registerAll(

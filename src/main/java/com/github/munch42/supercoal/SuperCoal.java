@@ -82,7 +82,8 @@ public class SuperCoal {
         public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event){
             event.getRegistry().registerAll(
                     SuperCoalEntities.SUPER_COAL_COW,
-                    SuperCoalEntities.SUPER_COAL_BLOB
+                    SuperCoalEntities.SUPER_COAL_BLOB,
+                    SuperCoalEntities.SUPER_COAL_BIPED
             );
 
             SuperCoalEntities.registerEntityWorldSpawns();

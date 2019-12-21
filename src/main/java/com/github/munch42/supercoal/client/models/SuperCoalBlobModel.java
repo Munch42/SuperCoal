@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.entity.model.SlimeModel;
 import net.minecraft.client.renderer.model.ModelBox;
+import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -29,12 +30,12 @@ public class SuperCoalBlobModel extends EntityModel<SuperCoalBlobEntity> {
 
     @Override
     public void render(SuperCoalBlobEntity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+        //setRotationAngle(rightLeg, limbSwing, limbSwingAmount);
         bb_main.render(scale);
+        //rightLeg.render(scale);
     }
 
-    public void setRotationAngle(RendererModel modelRenderer, float x, float y, float z) {
-        modelRenderer.rotateAngleX = x;
-        modelRenderer.rotateAngleY = y;
-        modelRenderer.rotateAngleZ = z;
+    public void setRotationAngle(RendererModel modelRenderer, float limbSwing, float limbSwingAmount) {
+        //this.rightLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
     }
 }

@@ -1,6 +1,7 @@
 package com.github.munch42.supercoal.lists;
 
 import com.github.munch42.supercoal.SuperCoal;
+import com.github.munch42.supercoal.entities.SuperCoalBipedEntity;
 import com.github.munch42.supercoal.entities.SuperCoalBlobEntity;
 import com.github.munch42.supercoal.entities.SuperCoalCowEntity;
 import net.minecraft.entity.EntityClassification;
@@ -14,17 +15,20 @@ import net.minecraftforge.event.RegistryEvent;
 public class SuperCoalEntities {
     public static EntityType<?> SUPER_COAL_COW = EntityType.Builder.create(SuperCoalCowEntity::new, EntityClassification.CREATURE).build(SuperCoal.modid + ":super_coal_cow").setRegistryName(SuperCoal.location("super_coal_cow"));
     public static EntityType<?> SUPER_COAL_BLOB = EntityType.Builder.create(SuperCoalBlobEntity::new, EntityClassification.CREATURE).build(SuperCoal.modid + ":super_coal_blob").setRegistryName(SuperCoal.location("super_coal_blob"));
+    public static EntityType<?> SUPER_COAL_BIPED = EntityType.Builder.create(SuperCoalBipedEntity::new, EntityClassification.CREATURE).build(SuperCoal.modid + ":super_coal_biped").setRegistryName(SuperCoal.location("super_coal_biped"));
 
     public static void registerEntitySpawnEggs(final RegistryEvent.Register<Item> event){
         event.getRegistry().registerAll(
                 ItemList.super_coal_cow_egg = registerEntitySpawnEgg(SUPER_COAL_COW, 0x1e40b0,0x7a21a3, "super_coal_cow_egg"),
-                ItemList.super_coal_blob_egg = registerEntitySpawnEgg(SUPER_COAL_BLOB, 0x28c8e0, 0xe31bb4, "super_coal_blob_egg")
+                ItemList.super_coal_blob_egg = registerEntitySpawnEgg(SUPER_COAL_BLOB, 0x28c8e0, 0xe31bb4, "super_coal_blob_egg"),
+                ItemList.super_coal_biped_egg = registerEntitySpawnEgg(SUPER_COAL_BIPED, 0xdba20f, 0x4017b0, "super_coal_biped_egg")
         );
     }
 
     public static void registerEntityWorldSpawns(){
         registerEntityWorldSpawn(SUPER_COAL_COW, Biomes.PLAINS, Biomes.BEACH, Biomes.JUNGLE, Biomes.FOREST);
         registerEntityWorldSpawn(SUPER_COAL_BLOB, Biomes.PLAINS, Biomes.BEACH, Biomes.JUNGLE, Biomes.FOREST);
+        registerEntityWorldSpawn(SUPER_COAL_BIPED, Biomes.PLAINS, Biomes.BEACH, Biomes.JUNGLE, Biomes.FOREST);
     }
 
     public static Item registerEntitySpawnEgg(EntityType<?> type, int colour1, int colour2, String name){

@@ -4,12 +4,14 @@ import com.github.munch42.supercoal.lists.SuperCoalEntities;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.world.World;
 
-public class SuperCoalBlobEntity extends CreatureEntity {
-    public SuperCoalBlobEntity(EntityType<? extends CreatureEntity> type, World worldIn){
-        super((EntityType<? extends CreatureEntity>) SuperCoalEntities.SUPER_COAL_BLOB, worldIn);
+public class SuperCoalBipedEntity extends CreatureEntity {
+    public SuperCoalBipedEntity(EntityType<? extends CreatureEntity> type, World worldIn){
+        super((EntityType<? extends CreatureEntity>) SuperCoalEntities.SUPER_COAL_BIPED, worldIn);
     }
 
     @Override

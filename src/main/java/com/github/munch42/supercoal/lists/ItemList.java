@@ -9,6 +9,7 @@ public class ItemList {
     // Eggs
     public static Item super_coal_cow_egg;
     public static Item super_coal_blob_egg;
+    public static Item super_coal_biped_egg;
 
     // BlockItems
     public static Item super_coal_ore;

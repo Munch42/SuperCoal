@@ -3,6 +3,7 @@
 
   "item.supercoal.super_coal_cow_egg": "Super Coal Cow Egg",
   "item.supercoal.super_coal_blob_egg": "Super Coal Blob Egg",
+  "item.supercoal.super_coal_biped_egg": "Super Coal Biped Egg",
 
   "block.supercoal.super_coal_ore": "Super Coal Ore",
   "block.supercoal.super_coal_ore_nether": "Nether Super Coal Ore",
@@ -10,6 +11,7 @@
 
   "entity.supercoal.super_coal_cow": "Super Coal Cow",
   "entity.supercoal.super_coal_blob": "Super Coal Blob",
+  "entity.supercoal.super_coal_biped": "Super Coal Biped Entity",
 
   "itemGroup.supercoal": "Super Coal"
 }
